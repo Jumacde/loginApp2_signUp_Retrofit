@@ -82,6 +82,7 @@
                     />
             </LinearLayout>
             <Button
+                android:id="@+id/b_up_SingUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="sing up"
@@ -90,6 +91,17 @@
                 android:textSize="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="120dp"
+                />
+            <Button
+                android:id="@+id/b_up_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="back"
+                android:textSize="20dp"
+                android:textColor="@color/YankeesBlue"
+                android:backgroundTint="@color/DutchWhite"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="10dp"
                 />
         </LinearLayout>
     </ScrollView>
