@@ -22,7 +22,7 @@
             android:id="@+id/toolbarId"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@color/DarkSkyBlue"
+            android:background="@color/Champagne"
             android:elevation="4dp"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
