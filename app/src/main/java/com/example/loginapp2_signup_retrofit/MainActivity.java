@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         b_logIn = findViewById(R.id.b_login);
         b_singUp = findViewById(R.id.b_singUp);
+
+        setUpLogInButton();
+        setUpSingUpButton();
     }
 
     private void setUpLogInButton() {
@@ -29,9 +32,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(
-
+                        MainActivity.this, LogInActivity.class
                 );
+                startActivity(intent);
+                finish();
             }
         });
     }
+
+    private void setUpSingUpButton() {
+        b_singUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(
+                        MainActivity.this, SingUpActivity.class
+                );
+                startActivity(intent);
+                finish();
+            }
+        });
+    }
+
 }
