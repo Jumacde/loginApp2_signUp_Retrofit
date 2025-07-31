@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/page_singUp"
-    android:orientation="vertical"
-    >
+    android:id="@+id/page_singUp">
 
     <ImageView
         android:layout_width="match_parent"
@@ -14,15 +12,85 @@
         android:scaleType="centerCrop"
         android:contentDescription="Main Content Background"
         />
+
     <ScrollView
         android:id="@+id/mainScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
         >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="email"
+                    android:padding="10dp"
+                    android:textColor="@color/YankeesBlue"
+                    android:background="@color/Argent"
+                    android:textSize="30dp"
+                    />
+                <EditText
+                    android:id="@+id/et_Up_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="email"
+                    android:textSize="30dp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/YankeesBlue"
+                    />
+            </LinearLayout>
 
-
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="password"
+                    android:padding="10dp"
+                    android:textColor="@color/YankeesBlue"
+                    android:background="@color/Argent"
+                    android:textSize="30dp"
+                    />
+                <EditText
+                    android:id="@+id/et_Up_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="password"
+                    android:textSize="30dp"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/YankeesBlue"
+                    />
+            </LinearLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sing up"
+                android:textColor="@color/YankeesBlue"
+                android:backgroundTint="@color/CadetBlue"
+                android:textSize="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="120dp"
+                />
+        </LinearLayout>
     </ScrollView>
-
-
-</LinearLayout>
+</FrameLayout>
