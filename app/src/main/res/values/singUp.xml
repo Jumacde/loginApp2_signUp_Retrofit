@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sing_up_text">Don’t have an account.<b><a href = "#" ></a>sing up</b></string>
+</resources>

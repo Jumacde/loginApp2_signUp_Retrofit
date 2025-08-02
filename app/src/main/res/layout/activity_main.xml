@@ -99,6 +99,17 @@
                 android:backgroundTint="@color/DarkSkyBlue"
                 />
 
+            <TextView
+                android:id="@+id/tv_singUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don’t have an account. sing up"
+                android:textSize="20dp"
+                android:textColor="@color/BrightTurquoise"
+                android:padding="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="80dp"/>
+
         </LinearLayout>
     </ScrollView>
     </FrameLayout>

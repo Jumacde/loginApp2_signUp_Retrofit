@@ -2,11 +2,17 @@ package com.example.loginapp2_signup_retrofit;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -14,6 +20,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     private Button b_logIn, b_singUp;
+    private TextView tv_singUp;
+    private String singUpText;
+
+    private SpannableString spannableString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +33,13 @@ public class MainActivity extends AppCompatActivity {
         b_logIn = findViewById(R.id.b_login);
         b_singUp = findViewById(R.id.b_singUp);
 
+        tv_singUp = findViewById(R.id.tv_singUp);
+        singUpText = getString(R.string.sing_up_text);
+        spannableString = new SpannableString(singUpText);
+
         setUpLogInButton();
         setUpSingUpButton();
+        setUpSingUpLink();
     }
 
     private void setUpLogInButton() {
@@ -53,4 +68,28 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private void setUpSingUpLink() {
+        ClickableSpan clickableSpan = new ClickableSpan() {
+            @Override
+            public void onClick(@NonNull View widget) {
+                Intent intent = new Intent(MainActivity.this, SingUpActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        };
+        // set clickable string on the TextView
+        String clickIndex = "sing up";
+        int singUP_startIndex = singUpText.indexOf(clickIndex);
+        if (singUP_startIndex != -1) {
+            spannableString.setSpan(
+                    clickableSpan,
+                    singUP_startIndex,
+                    singUP_startIndex + clickIndex.length(),
+                    Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+            );
+        }
+        tv_singUp.setText(spannableString);
+        tv_singUp.setMovementMethod(LinkMovementMethod.getInstance());
+
+    }
 }
