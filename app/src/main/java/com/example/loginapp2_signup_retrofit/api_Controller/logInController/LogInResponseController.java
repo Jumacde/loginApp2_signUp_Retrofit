@@ -1,4 +1,4 @@
-package com.example.loginapp2_signup_retrofit.api_Controller;
+package com.example.loginapp2_signup_retrofit.api_Controller.logInController;
 
 public interface LogInResponseController {
     // getter

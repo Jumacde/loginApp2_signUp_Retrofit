@@ -1,8 +1,7 @@
-package com.example.loginapp2_signup_retrofit.api_Controller.typeAdapter;
+package com.example.loginapp2_signup_retrofit.api_Controller.logInController.typeAdapter;
 
-import com.example.loginapp2_signup_retrofit.api_Controller.LogInRequestController;
-import com.example.loginapp2_signup_retrofit.api_Controller.LogInResponseController;
-import com.example.loginapp2_signup_retrofit.api_Controller.impl.LogInResponseController_impl;
+import com.example.loginapp2_signup_retrofit.api_Controller.logInController.LogInResponseController;
+import com.example.loginapp2_signup_retrofit.api_Controller.logInController.impl.LogInResponseController_impl;
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;

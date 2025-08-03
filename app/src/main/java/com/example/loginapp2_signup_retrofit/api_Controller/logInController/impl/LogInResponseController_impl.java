@@ -1,6 +1,6 @@
-package com.example.loginapp2_signup_retrofit.api_Controller.impl;
+package com.example.loginapp2_signup_retrofit.api_Controller.logInController.impl;
 
-import com.example.loginapp2_signup_retrofit.api_Controller.LogInResponseController;
+import com.example.loginapp2_signup_retrofit.api_Controller.logInController.LogInResponseController;
 import com.google.gson.annotations.SerializedName;
 
 public class LogInResponseController_impl implements LogInResponseController {
