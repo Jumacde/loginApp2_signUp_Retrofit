@@ -9,6 +9,7 @@ import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_singUp;
     private String singUpText;
 
+    private LinearLayout singUpPage;
+
     private SpannableString spannableString;
 
     @Override
@@ -34,10 +37,13 @@ public class MainActivity extends AppCompatActivity {
 
         tv_singUp = findViewById(R.id.tv_singUp);
         singUpText = getString(R.string.sing_up_text);
+        singUpPage = findViewById(R.id.singUp_text_container);
         spannableString = new SpannableString(singUpText);
 
         setUpLogInButton();
         setUpSingUpLink();
+
+
     }
 
     private void setUpLogInButton() {

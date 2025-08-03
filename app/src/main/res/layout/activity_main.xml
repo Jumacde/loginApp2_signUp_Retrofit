@@ -100,7 +100,14 @@
 
         </LinearLayout>
     </ScrollView>
+
     </FrameLayout>
     </LinearLayout>
+    <include layout="@layout/sing_up_main"
+        android:id="@+id/singUp_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
 
 </androidx.drawerlayout.widget.DrawerLayout>
