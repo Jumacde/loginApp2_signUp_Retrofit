@@ -1,9 +1,9 @@
 package com.example.loginapp2_signup_retrofit.API_Controller.impl;
 
-import com.example.loginapp2_signup_retrofit.API_Controller.ResponseController;
+import com.example.loginapp2_signup_retrofit.API_Controller.LogInResponseController;
 import com.google.gson.annotations.SerializedName;
 
-public class ResponseController_impl implements ResponseController {
+public class LogInLogInResponseController_impl implements LogInResponseController {
     @SerializedName("token")
     private String token; // Authentication token
     @SerializedName("message")
@@ -11,11 +11,11 @@ public class ResponseController_impl implements ResponseController {
     @SerializedName("isSuccess")
     private boolean isSuccess;
 
-    public ResponseController_impl() {
+    public LogInLogInResponseController_impl() {
 
     }
 
-    public ResponseController_impl(String token, String message, boolean isSuccess) {
+    public LogInLogInResponseController_impl(String token, String message, boolean isSuccess) {
         this.token = token;
         this.message = message;
         this.isSuccess = isSuccess;

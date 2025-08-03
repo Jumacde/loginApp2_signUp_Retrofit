@@ -1,15 +1,15 @@
 package com.example.loginapp2_signup_retrofit.API_Controller.impl;
 
-import com.example.loginapp2_signup_retrofit.API_Controller.RequestController;
+import com.example.loginapp2_signup_retrofit.API_Controller.LogInRequestController;
 import com.google.gson.annotations.SerializedName;
 
-public class RequestController_impl implements RequestController {
+public class LogInRequestController_impl implements LogInRequestController {
     @SerializedName("email")
     private String email;
     @SerializedName("password")
     private String password;
 
-    public RequestController_impl(String email, String password) {
+    public LogInRequestController_impl(String email, String password) {
         this.email = email;
         this.password = password;
     }

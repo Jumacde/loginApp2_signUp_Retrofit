@@ -1,6 +1,6 @@
 package com.example.loginapp2_signup_retrofit.API_Controller;
 
-public interface RequestController {
+public interface LogInRequestController {
     // getter
     String getEmail();
     String getPassword();
