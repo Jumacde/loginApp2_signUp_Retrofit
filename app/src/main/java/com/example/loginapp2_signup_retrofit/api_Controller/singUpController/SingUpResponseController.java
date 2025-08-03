@@ -1,4 +1,7 @@
 package com.example.loginapp2_signup_retrofit.api_Controller.singUpController;
 
-public interface SingUpResponseController {
+import com.example.loginapp2_signup_retrofit.api_Controller.logInController.LogInResponseController;
+
+public interface SingUpResponseController  {
+
 }

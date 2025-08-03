@@ -9,6 +9,10 @@ public class LogInRequestController_impl implements LogInRequestController {
     @SerializedName("password")
     private String password;
 
+    public LogInRequestController_impl() {
+
+    }
+
     public LogInRequestController_impl(String email, String password) {
         this.email = email;
         this.password = password;
