@@ -19,7 +19,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    private Button b_logIn, b_singUp;
+    private Button b_logIn;
     private TextView tv_singUp;
     private String singUpText;
 
@@ -31,14 +31,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         b_logIn = findViewById(R.id.b_login);
-        b_singUp = findViewById(R.id.b_singUp);
 
         tv_singUp = findViewById(R.id.tv_singUp);
         singUpText = getString(R.string.sing_up_text);
         spannableString = new SpannableString(singUpText);
 
         setUpLogInButton();
-        setUpSingUpButton();
         setUpSingUpLink();
     }
 
@@ -55,18 +53,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void setUpSingUpButton() {
-        b_singUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(
-                        MainActivity.this, SingUpActivity.class
-                );
-                startActivity(intent);
-                finish();
-            }
-        });
-    }
 
     private void setUpSingUpLink() {
         ClickableSpan clickableSpan = new ClickableSpan() {

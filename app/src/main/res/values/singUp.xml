@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="sing_up_text">Don’t have an account.<a href = "#">sing up</a></string>
+    <string name="sing_up_text">Don’t have an account. sing up </string>
 </resources>
