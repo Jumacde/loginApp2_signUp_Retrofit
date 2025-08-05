@@ -80,6 +80,12 @@ public class LogInActivity extends AppCompatActivity {
                                 + logInRequestController.getToken());
 
                         Intent intent = new Intent(LogInActivity.this, SuccessLogIn_Activity.class);
+                        startActivity(intent);
+                        finish();
+                    } else {
+                        Toast.makeText(LogInActivity.this, "Login Failed: " + logInRequestController.getMessage(), Toast.LENGTH_LONG).show();
+                        Log.e("MainActivity", "Login failed: " + logInRequestController.getMessage());
+
                     }
 
                 }

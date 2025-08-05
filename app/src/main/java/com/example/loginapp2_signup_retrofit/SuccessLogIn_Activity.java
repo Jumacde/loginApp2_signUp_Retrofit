@@ -13,7 +13,7 @@ public class SuccessLogIn_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.succcess_login);
+        setContentView(R.layout.succcess_log_in);
 
         b_logOut = findViewById(R.id.b_logOut);
         setUpLogOut();

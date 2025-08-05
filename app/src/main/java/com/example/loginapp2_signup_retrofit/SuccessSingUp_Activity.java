@@ -13,7 +13,7 @@ public class SuccessSingUp_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.succcess_singup);
+        setContentView(R.layout.succcess_sing_up);
 
         b_back = findViewById(R.id.b_back_to_main);
         setUpBackButton();

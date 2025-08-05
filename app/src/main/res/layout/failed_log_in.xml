@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/failed_LogIn"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/error_good_background"
+        android:scaleType="centerCrop"
+        android:contentDescription="Main Content Background"
+        />
+
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="70dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="faild log in..."
+                android:textSize="35dp"
+                android:textColor="@color/JapaneseCarmine"
+                android:background="@color/white"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:padding="10dp"
+                />
+            <Button
+                android:id="@+id/b_back_to_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="back"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="140dp"
+                android:backgroundTint="@color/DarkSkyBlue"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
