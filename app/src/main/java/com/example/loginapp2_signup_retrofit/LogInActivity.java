@@ -79,7 +79,7 @@ public class LogInActivity extends AppCompatActivity {
                         Log.d("MainActivity", "Login successful, Token: "
                                 + logInRequestController.getToken());
 
-                        Intent intent = new Intent(LogInActivity.this, );
+                        Intent intent = new Intent(LogInActivity.this, SuccessLogIn_Activity.class);
                     }
 
                 }
