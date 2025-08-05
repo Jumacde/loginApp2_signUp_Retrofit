@@ -85,7 +85,24 @@ public class LogInActivity extends AppCompatActivity {
                     } else {
                         Toast.makeText(LogInActivity.this, "Login Failed: " + logInRequestController.getMessage(), Toast.LENGTH_LONG).show();
                         Log.e("MainActivity", "Login failed: " + logInRequestController.getMessage());
-
+                        Intent intent = new Intent(LogInActivity.this, FailedLogIn_Activity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                } else {
+                    try {
+                        String error = response.errorBody() != null ? response.errorBody().string() : "Unknown error";
+                        Toast.makeText(LogInActivity.this, "Error: " + response.code() + " - " + error, Toast.LENGTH_LONG).show();
+                        Log.e("LogInActivity", "API Error: " + response.code() + " - " + error);
+                        Intent intent = new Intent(LogInActivity.this, FailedLogIn_Activity.class);
+                        startActivity(intent);
+                        finish();
+                    } catch (Exception e) {
+                        Toast.makeText(LogInActivity.this, "Error parsing error response", Toast.LENGTH_SHORT).show();
+                        Log.e("LogInActivity", "Error parsing error response", e);
+                        Intent intent = new Intent(LogInActivity.this, FailedLogIn_Activity.class);
+                        startActivity(intent);
+                        finish();
                     }
 
                 }
