@@ -36,10 +36,10 @@
                 android:padding="10dp"
                 />
             <Button
-                android:id="@+id/b_back_to_main"
+                android:id="@+id/b_logOut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="back"
+                android:text="log out"
                 android:textSize="30dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="140dp"
