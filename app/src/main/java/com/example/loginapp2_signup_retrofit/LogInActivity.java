@@ -110,7 +110,11 @@ public class LogInActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<LogInResponseController> call, Throwable throwable) {
-
+                Toast.makeText(LogInActivity.this, "Network error: " + throwable.getMessage(), Toast.LENGTH_LONG).show();
+                Log.e("LogInActivity", "Network error during login", throwable);
+                Intent intent = new Intent(LogInActivity.this, FailedLogIn_Activity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
