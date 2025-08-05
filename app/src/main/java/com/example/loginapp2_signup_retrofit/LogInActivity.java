@@ -69,22 +69,22 @@ public class LogInActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<LogInResponseController> call, Response<LogInResponseController> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    LogInResponseController logInRequestController = response.body();
-                    if (logInRequestController.getIsSuccess()) {
+                    LogInResponseController loginResponse = response.body();
+                    if (loginResponse.getIsSuccess()) {
                         Toast.makeText(
                                 LogInActivity.this,
                                 "Login Successful! Token: "
-                                        + logInRequestController.getToken(),
+                                        + loginResponse.getToken(),
                                 Toast.LENGTH_LONG).show();
                         Log.d("MainActivity", "Login successful, Token: "
-                                + logInRequestController.getToken());
+                                + loginResponse.getToken());
 
                         Intent intent = new Intent(LogInActivity.this, SuccessLogIn_Activity.class);
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(LogInActivity.this, "Login Failed: " + logInRequestController.getMessage(), Toast.LENGTH_LONG).show();
-                        Log.e("MainActivity", "Login failed: " + logInRequestController.getMessage());
+                        Toast.makeText(LogInActivity.this, "Login Failed: " + loginResponse.getMessage(), Toast.LENGTH_LONG).show();
+                        Log.e("MainActivity", "Login failed: " + loginResponse.getMessage());
                         Intent intent = new Intent(LogInActivity.this, FailedLogIn_Activity.class);
                         startActivity(intent);
                         finish();
