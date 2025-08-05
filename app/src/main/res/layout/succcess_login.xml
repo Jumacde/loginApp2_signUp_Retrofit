@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/success_LogIn"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_good_background"
+        android:scaleType="centerCrop"
+        android:contentDescription="Main Content Background"
+        />
+
+    <ScrollView
+        android:id="@+id/mainScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="successfully logged in!!"
+                android:textSize="35dp"
+                android:textColor="@color/VividYellow"
+                android:layout_marginTop="150dp"
+                android:padding="10dp"
+                />
+            <Button
+                android:id="@+id/b_back_to_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="back"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="140dp"
+                android:backgroundTint="@color/DarkSkyBlue"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
