@@ -19,7 +19,6 @@ import com.example.loginapp2_signup_retrofit.api_Controller.logInController.impl
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class LogInActivity extends AppCompatActivity {
     private Button b_back, b_submit;
@@ -67,7 +66,8 @@ public class LogInActivity extends AppCompatActivity {
         Call<LogInResponseController> call = authService.logInUser(logInRequestController);
         call.enqueue(new Callback<LogInResponseController>() {
             @Override
-            public void onResponse(Call<LogInResponseController> call, Response<LogInResponseController> response) {
+            public void onResponse(Call<LogInResponseController> call,
+                                   Response<LogInResponseController> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     LogInResponseController loginResponse = response.body();
                     if (loginResponse.getIsSuccess()) {
@@ -76,7 +76,7 @@ public class LogInActivity extends AppCompatActivity {
                                 "Login Successful! Token: "
                                         + loginResponse.getToken(),
                                 Toast.LENGTH_LONG).show();
-                        Log.d("MainActivity", "Login successful, Token: "
+                        Log.d("LogInActivity", "Login successful, Token: "
                                 + loginResponse.getToken());
 
                         Intent intent = new Intent(LogInActivity.this, SuccessLogIn_Activity.class);
