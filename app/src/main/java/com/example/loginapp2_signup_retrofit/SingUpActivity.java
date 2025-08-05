@@ -86,8 +86,8 @@ public class SingUpActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     } else {
-                        Toast.makeText(SingUpActivity.this, "Login Failed: " + logInResponse.getMessage(), Toast.LENGTH_LONG).show();
-                        Log.e("SingUpActivity", "Login failed: " + logInResponse.getMessage());
+                        Toast.makeText(SingUpActivity.this, "SingUp Failed: " + logInResponse.getMessage(), Toast.LENGTH_LONG).show();
+                        Log.e("SingUpActivity", "SingUp failed: " + logInResponse.getMessage());
                         Intent intent = new Intent(SingUpActivity.this, FailedSingUp_Activity.class);
                         startActivity(intent);
                         finish();
