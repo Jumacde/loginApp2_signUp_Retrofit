@@ -76,10 +76,10 @@ public class SingUpActivity extends AppCompatActivity {
                     if (logInResponse.getIsSuccess()) {
                         Toast.makeText(
                                 SingUpActivity.this,
-                                "Login Successful! Token: "
+                                "sing up Successful! Token: "
                                         + logInResponse.getToken(),
                                 Toast.LENGTH_LONG).show();
-                        Log.d("SingUpActivity", "Login successful, Token: "
+                        Log.d("SingUpActivity", "SingUp successful, Token: "
                                 + logInResponse.getToken());
 
                         Intent intent = new Intent(SingUpActivity.this, SuccessSingUp_Activity.class);
@@ -87,7 +87,7 @@ public class SingUpActivity extends AppCompatActivity {
                         finish();
                     } else {
                         Toast.makeText(SingUpActivity.this, "Login Failed: " + logInResponse.getMessage(), Toast.LENGTH_LONG).show();
-                        Log.e("MainActivity", "Login failed: " + logInResponse.getMessage());
+                        Log.e("SingUpActivity", "Login failed: " + logInResponse.getMessage());
                         Intent intent = new Intent(SingUpActivity.this, FailedSingUp_Activity.class);
                         startActivity(intent);
                         finish();
