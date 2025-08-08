@@ -10,6 +10,6 @@ import retrofit2.http.POST;
 public interface AuthService {
     @POST("/api/auth/logIn")
     Call<LogInResponseController> logInUser(@Body LogInRequestController logInRequestController);
-    @POST("api/auth/singUp")
+    @POST("/api/auth/singUp")
     Call<LogInResponseController> singUpUser(@Body LogInRequestController logInRequestController);
 }

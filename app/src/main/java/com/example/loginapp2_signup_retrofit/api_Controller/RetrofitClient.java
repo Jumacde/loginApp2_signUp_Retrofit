@@ -14,7 +14,7 @@ public class RetrofitClient {
     private static Retrofit retrofit;
     // input "ipconfig" on cmd and input here IPv4 adresse.
     // "http://IPv4-Adresse:8080/ "
-    private static String BASE_URL = "http://172.22.243.244:8080/";
+    private static String BASE_URL = "http://172.22.242.97:8080/";
 
 
     public RetrofitClient() {

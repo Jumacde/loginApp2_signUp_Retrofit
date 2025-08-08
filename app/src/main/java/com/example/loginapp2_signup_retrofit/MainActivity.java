@@ -9,6 +9,7 @@ import android.text.style.ClickableSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_singUp;
     private String singUpText;
 
-    private LinearLayout singUpPage;
+    private FrameLayout singUpPage;
 
     private SpannableString spannableString;
 
