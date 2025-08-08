@@ -21,8 +21,11 @@ public class RetrofitClient {
 
     }
 
+
+
     public static AuthService getAuthService() {
         if (retrofit == null) {
+            System.out.println("Base URL: " + BASE_URL);
             GsonBuilder gsonBuilder = new GsonBuilder();
             gsonBuilder.registerTypeAdapter(LogInRequestController.class, new LogInRequest_TypeAdapter());
             gsonBuilder.registerTypeAdapter(LogInResponseController.class, new LogInResponse_TypeAdapter());

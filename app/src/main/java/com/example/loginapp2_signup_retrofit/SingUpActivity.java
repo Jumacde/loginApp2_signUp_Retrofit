@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.loginapp2_signup_retrofit.api_Controller.AuthService;
 import com.example.loginapp2_signup_retrofit.api_Controller.RetrofitClient;
 import com.example.loginapp2_signup_retrofit.api_Controller.logInController.LogInResponseController;
-import com.example.loginapp2_signup_retrofit.api_Controller.singUpController.SingUpRequestController;
 import com.example.loginapp2_signup_retrofit.api_Controller.singUpController.impl.SingUpRequestController_impl;
 
 import retrofit2.Call;
@@ -26,7 +25,7 @@ public class SingUpActivity extends AppCompatActivity {
 
     private AuthService authService;
 
-    private SingUpRequestController singUpRequestController;
+    private SingUpRequestController_impl singUpRequestControllerImpl;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,16 +56,16 @@ public class SingUpActivity extends AppCompatActivity {
         String password = et_Up_password.getText().toString().trim();
 
         if(name.isEmpty() || email.isEmpty() || password.isEmpty()) {
-            Toast.makeText(this, "Name, Email and password cannot be empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Name, Email and password cannot be empty", Toast.LENGTH_LONG).show();
             return;
         }
 
-        singUpRequestController = new SingUpRequestController_impl();
-        singUpRequestController.setUsername(name);
-        singUpRequestController.setEmail(email);
-        singUpRequestController.setPassword(password);
+        singUpRequestControllerImpl = new SingUpRequestController_impl();
+        singUpRequestControllerImpl.setUsername(name);
+        singUpRequestControllerImpl.setEmail(email);
+        singUpRequestControllerImpl.setPassword(password);
 
-        Call<LogInResponseController> call = authService.singUpUser(singUpRequestController);
+        Call<LogInResponseController> call = authService.singUpUser(singUpRequestControllerImpl);
         call.enqueue(new Callback<LogInResponseController>() {
             @Override
             public void onResponse(Call<LogInResponseController> call,
@@ -101,7 +100,7 @@ public class SingUpActivity extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     } catch (Exception e) {
-                        Toast.makeText(SingUpActivity.this, "Error parsing error response", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(SingUpActivity.this, "Error parsing error response", Toast.LENGTH_LONG).show();
                         Log.e("SingUpActivity", "Error parsing error response", e);
                         Intent intent = new Intent(SingUpActivity.this, FailedSingUp_Activity.class);
                         startActivity(intent);
