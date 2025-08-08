@@ -5,7 +5,7 @@ import com.example.loginapp2_signup_retrofit.api_Controller.logInController.impl
 import com.google.gson.TypeAdapter;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-
+import com.google.gson.stream.JsonToken;
 import java.io.IOException;
 
 /*
@@ -14,7 +14,6 @@ import java.io.IOException;
 public class LogInResponse_TypeAdapter extends TypeAdapter<LogInResponseController> {
 
     public LogInResponse_TypeAdapter() {
-
     }
 
     @Override
@@ -38,11 +37,27 @@ public class LogInResponse_TypeAdapter extends TypeAdapter<LogInResponseControll
         while (in.hasNext()) {
             String name = in.nextName();
             if (name.equals("token")) {
-                responseController.setToken(in.nextString());
+                if (in.peek() == JsonToken.NULL) {
+                    in.nextNull();
+                    responseController.setToken(null);
+                } else {
+                    responseController.setToken(in.nextString());
+                }
             } else if (name.equals("message")) {
-                responseController.setMessage(in.nextString());
+                if (in.peek() == JsonToken.NULL) {
+                    in.nextNull();
+                    responseController.setMessage(null);
+                } else {
+                    responseController.setMessage(in.nextString());
+                }
             } else if (name.equals("isSuccess")) {
-                responseController.setIsSuccess(in.nextBoolean());
+                if (in.peek() == JsonToken.NULL) {
+                    in.nextNull();
+                    // isSuccessがnullの場合、booleanのデフォルト値falseを設定
+                    responseController.setIsSuccess(false);
+                } else {
+                    responseController.setIsSuccess(in.nextBoolean());
+                }
             } else {
                 in.skipValue();
             }
@@ -50,5 +65,4 @@ public class LogInResponse_TypeAdapter extends TypeAdapter<LogInResponseControll
         in.endObject();
         return responseController;
     }
-
 }
